@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 71,
+      "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 110,
+      "minLength": 3
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "t-shits",
+        "mug",
+        "hoodie",
+        "stickers"
+      ],
+      "default": "t-shits"
+    },
+    "size": {
+      "type": "string",
+      "maxLength": 70,
+      "minLength": 3
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "red ",
+        "blue",
+        "black",
+        "white "
+      ]
+    },
+    "price": {
+      "required": true,
+      "type": "integer"
+    },
+    "availableQty": {
+      "type": "integer",
+      "max": 10,
+      "required": true
+    }
+  }
+}
